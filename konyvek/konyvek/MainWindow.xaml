@@ -1,0 +1,67 @@
+﻿<Window x:Class="konyvek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:konyvek"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridXAML" HorizontalAlignment="Left" Height="200" Margin="20,34,0,0" VerticalAlignment="Top" Width="602" Grid.Column="1" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="2" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Azonosító" Width="*" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="Szerző" Width="*" Binding="{Binding szerzo}"/>
+                <DataGridTextColumn Header="Cím" Width="*" Binding="{Binding cim}"/>
+                <DataGridTextColumn Header="Kiadás éve" Width="*" Binding="{Binding ev}"/>
+                <DataGridTextColumn Header="Kiadó" Width="*" Binding="{Binding kiado}"/>
+                <DataGridCheckBoxColumn Header="Elérhetőség" Width="*" ClipboardContentBinding="{x:Null}" Binding="{Binding elerhetoseg}"/>
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+
+            </DataGrid.Resources>
+        </DataGrid>
+        <Button Content="Dokumentumok" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="20,11,0,0" VerticalAlignment="Top" Width="111" Click="Button_Click_2"/>
+        <Button Content="Olvasók" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="131,11,0,0" VerticalAlignment="Top" Width="111" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="DataGridOlvaso" Grid.Column="1" HorizontalAlignment="Left" Height="200" Margin="20,34,0,0" VerticalAlignment="Top" Width="602" Visibility="Hidden" Grid.ColumnSpan="2" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Olvasójegy szám" Width="*" Binding="{Binding olvasoID}"/>
+                <DataGridTextColumn Header="Név" Width="*" Binding="{Binding nev}"/>
+                <DataGridTextColumn Header="Születési dátum" Width="*" Binding="{Binding szulDatum}"/>
+                <DataGridTextColumn Header="Irányítószám" Width="*" Binding="{Binding irSzam}"/>
+                <DataGridTextColumn Header="Település" Width="*" Binding="{Binding telepules}"/>
+                <DataGridTextColumn Header="Utca,házszám" Width="*" Binding="{Binding utcaHsz}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="385" Margin="20,34,0,0" VerticalAlignment="Top" Width="602" Grid.ColumnSpan="2" Name="DataGridKolcsonzesek" Visibility="Hidden" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kölcsönzés azonosító" Binding="{Binding kolcsonzesID}" Width="*"/>
+                <DataGridTextColumn Header="Olvasójegyszám" Binding="{Binding olvasoID}" Width="*"/>
+                <DataGridTextColumn Header="Könyv azonosító" Binding="{Binding konyvID}" Width="*"/>
+                <DataGridTextColumn Header="Kölcsönzés kezdete" Binding="{Binding kezdet}"  Width="*"/>
+                <DataGridTextColumn Header="Kölcsönzés vége" Binding="{Binding veg}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Kölcsönzések" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="53,11,0,0" VerticalAlignment="Top" Width="111" Click="Button_Click_3"/>
+        <Button Content="Új könyv felvétele" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="0,384,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click" Name="ujKonyvGomb"/>
+        <Button Content="Új olvasó felvétele" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="0,384,0,0" VerticalAlignment="Top" Width="226" Name="ujOlvasoGomb" Click="Button_Click_4" Visibility="Hidden"/>
+        <Label x:Name="cimke1" Content="Azonosító" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="20,242,0,0" VerticalAlignment="Top" Width="111" Background="#FFDADADA"/>
+        <Label x:Name="cimke3" Content="Cím" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="20,298,0,0" VerticalAlignment="Top" Width="111" Background="#FFDADADA"/>
+        <Label x:Name="cimke2" Content="Szerző" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="169,242,0,0" VerticalAlignment="Top" Width="111" Background="#FFDADADA"/>
+        <Label x:Name="cimke4" Content="Kiadás éve" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="169,298,0,0" VerticalAlignment="Top" Width="111" Background="#FFDADADA"/>
+        <TextBox x:Name="ujID" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="153,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="ujCim" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="153,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="ujSzerzo" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="304,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="ujEv" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="305,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <Label x:Name="cimke5" Content="Kiadó" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="20,349,0,0" VerticalAlignment="Top" Width="111" Background="#FFDADADA"/>
+        <TextBox x:Name="ujKiado" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="153,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" RenderTransformOrigin="0.116,0.467" Grid.ColumnSpan="2"/>
+        <Label x:Name="cimke6" Content="Elérhetőség" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="169,349,0,0" VerticalAlignment="Top" Width="111" Background="#FFDADADA"/>
+        <CheckBox x:Name="ujElerhetoseg" Content="Kölcsönözhető" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="304,349,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="ujUtcaHsz" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="305,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

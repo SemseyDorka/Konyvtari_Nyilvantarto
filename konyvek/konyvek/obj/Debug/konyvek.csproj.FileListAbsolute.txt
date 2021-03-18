@@ -1,0 +1,15 @@
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\bin\Debug\konyvek.exe.config
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\bin\Debug\konyvek.exe
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\bin\Debug\konyvek.pdb
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\MainWindow.g.cs
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\App.g.cs
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek_MarkupCompile.cache
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek_MarkupCompile.lref
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\MainWindow.baml
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.g.resources
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.Properties.Resources.resources
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.csproj.GenerateResource.cache
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.csproj.CoreCompileInputs.cache
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.exe
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.pdb
+C:\Users\semse\OneDrive\Dokumentumok\Mechwart\komp. prog\konyv\konyvek\konyvek\obj\Debug\konyvek.csprojAssemblyReference.cache
